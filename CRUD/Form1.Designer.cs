@@ -112,9 +112,9 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(2, 384);
+            this.panel1.Location = new System.Drawing.Point(6, 384);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 42);
+            this.panel1.Size = new System.Drawing.Size(1064, 42);
             this.panel1.TabIndex = 19;
             // 
             // panel2
@@ -125,10 +125,9 @@
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.lblDate);
-            this.panel2.Location = new System.Drawing.Point(2, 953);
+            this.panel2.Location = new System.Drawing.Point(9, 953);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1077, 43);
+            this.panel2.Size = new System.Drawing.Size(1062, 43);
             this.panel2.TabIndex = 20;
             // 
             // btnCancel
@@ -166,13 +165,12 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(1043, 12);
+            this.lblDate.Location = new System.Drawing.Point(86, 48);
             this.lblDate.Name = "lblDate";
-            this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblDate.Size = new System.Drawing.Size(11, 16);
             this.lblDate.TabIndex = 21;
             this.lblDate.Text = "-";
-            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgvPeople
             // 
@@ -237,7 +235,7 @@
             this.pnlForm.Enabled = false;
             this.pnlForm.Location = new System.Drawing.Point(6, 432);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1060, 515);
+            this.pnlForm.Size = new System.Drawing.Size(1065, 515);
             this.pnlForm.TabIndex = 37;
             // 
             // lblPhoneNumber
@@ -319,6 +317,7 @@
             this.cblRestrictions.Name = "cblRestrictions";
             this.cblRestrictions.Size = new System.Drawing.Size(378, 157);
             this.cblRestrictions.TabIndex = 68;
+            this.cblRestrictions.Click += new System.EventHandler(this.cblRestrictions_Click);
             // 
             // label15
             // 
@@ -353,12 +352,13 @@
             // chkSupportStaff
             // 
             this.chkSupportStaff.AutoSize = true;
-            this.chkSupportStaff.Location = new System.Drawing.Point(673, 6);
+            this.chkSupportStaff.Location = new System.Drawing.Point(673, 7);
             this.chkSupportStaff.Name = "chkSupportStaff";
             this.chkSupportStaff.Size = new System.Drawing.Size(49, 20);
             this.chkSupportStaff.TabIndex = 64;
             this.chkSupportStaff.Text = "NO";
             this.chkSupportStaff.UseVisualStyleBackColor = true;
+            this.chkSupportStaff.CheckedChanged += new System.EventHandler(this.chkSupportStaff_CheckedChanged);
             // 
             // cbContactType
             // 
@@ -433,7 +433,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 188);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1054, 320);
+            this.tabControl1.Size = new System.Drawing.Size(1062, 320);
             this.tabControl1.TabIndex = 56;
             // 
             // tabPage1
@@ -444,7 +444,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1046, 291);
+            this.tabPage1.Size = new System.Drawing.Size(1054, 291);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login Access Details";
             // 
@@ -636,12 +636,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1078, 1008);
+            this.ClientSize = new System.Drawing.Size(1081, 1008);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.dgvPeople);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CRUDForm";
             this.Text = "People Administration";
@@ -649,7 +650,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlForm.ResumeLayout(false);

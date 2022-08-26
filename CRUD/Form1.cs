@@ -22,6 +22,7 @@ namespace CRUD
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lblDate.Text = DateTime.Now.ToString("F");
             GetClientTypes();
             GetContactTypes();
             GetPermissions();
@@ -291,6 +292,16 @@ namespace CRUD
             btnCancel.Enabled = true;
             btnUpdate.Visible = false;
             btnDelete.Visible = false;
+        }
+
+        private void cblRestrictions_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chkSupportStaff_CheckedChanged(object sender, EventArgs e)
+        {
+            chkSupportStaff.Text = chkSupportStaff.Checked ? "SI" : "NO";
         }
     }
 }
